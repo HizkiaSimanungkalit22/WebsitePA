@@ -1,0 +1,402 @@
+/* Reset CSS untuk memastikan tampilan konsisten di semua browser */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+/* Properti untuk HTML */
+html {
+    scroll-behavior: smooth; /* Mengaktifkan scroll yang halus */
+}
+
+/* Properti untuk body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #444;
+    background: linear-gradient(to bottom, #113880, #16181b); /* ← ubah di sini */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Properti untuk link */
+a {
+    color: #0056b3; /* Warna link */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    transition: color 0.3s ease; /* Animasi perubahan warna */
+}
+a:hover, a:focus {
+    color: #003d99; /* Warna link saat hover atau fokus */
+}
+
+/* Properti untuk navbar */
+nav {
+    background: linear-gradient(135deg, #1a237e, #3949ab); /* Gradien latar belakang navbar */
+    color: #f3f4f6; /* Warna teks navbar */
+    padding: 1.5rem 2.5rem; /* Padding navbar */
+    position: sticky; /* Navbar tetap di atas saat scroll */
+    top: 0; /* Posisi navbar di atas */
+    z-index: 1000; /* Prioritas tampilan navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Bayangan navbar */
+}
+nav .container {
+    max-width: 1100px; /* Lebar maksimum container */
+    margin: auto; /* Margin otomatis untuk center */
+    display: flex; /* Flexbox untuk tata letak */
+    justify-content: space-between; /* Spasi antar elemen */
+    align-items: center; /* Elemen sejajar secara vertikal */
+}
+nav .logo {
+    font-size: 1.5rem; /* Ukuran font logo */
+    font-weight: bold; /* Ketebalan font logo */
+    color: #f3f4f6; /* Warna teks logo */
+    letter-spacing: 1px; /* Jarak antar huruf */
+    text-align: left; /* Posisi teks kiri */
+    margin-left: 0; /* Margin kiri */
+    padding-left: 1rem; /* Padding kiri */
+}
+nav ul {
+    list-style: none; /* Menghilangkan bullet list */
+    display: flex; /* Flexbox untuk tata letak */
+    gap: 1.5rem; /* Jarak antar item */
+}
+nav ul li {
+    font-weight: 600; /* Ketebalan font item */
+}
+
+/* Hero Section */
+header.hero {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradien latar belakang hero */
+    color: white; /* Warna teks hero */
+    padding: 3rem 1rem; /* Padding hero */
+    max-width: 1200px; /* Lebar maksimum hero */
+    margin: auto; /* Margin otomatis untuk center */
+    text-align: center; /* Teks rata tengah */
+    border-radius: 0; /* Radius border */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Bayangan hero */
+    position: relative; /* Posisi relatif */
+    overflow: hidden; /* Menghilangkan overflow */
+    margin-bottom: -1px; /* Margin bawah */
+}
+
+header.hero::before {
+    content: ''; /* Konten kosong */
+    position: absolute; /* Posisi absolut */
+    top: -50px; /* Posisi atas */
+    left: -50px; /* Posisi kiri */
+    width: 200px; /* Lebar */
+    height: 200px; /* Tinggi */
+    background: rgba(255, 255, 255, 0.1); /* Warna latar belakang */
+    border-radius: 50%; /* Radius border */
+    z-index: 0; /* Prioritas tampilan */
+}
+
+header.hero::after {
+    content: ''; /* Konten kosong */
+    position: absolute; /* Posisi absolut */
+    bottom: -50px; /* Posisi bawah */
+    right: -50px; /* Posisi kanan */
+    width: 200px; /* Lebar */
+    height: 200px; /* Tinggi */
+    background: rgba(255, 255, 255, 0.1); /* Warna latar belakang */
+    border-radius: 50%; /* Radius border */
+    z-index: 0; /* Prioritas tampilan */
+}
+
+header.hero h1, header.hero p {
+    position: relative; /* Posisi relatif */
+    z-index: 1; /* Prioritas tampilan */
+}
+
+header.hero h1 {
+    font-size: 2.5rem; /* Ukuran font */
+    font-weight: 600; /* Ketebalan font */
+    color: #ffffff; /* Warna teks */
+    margin-bottom: 1rem; /* Margin bawah */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+    text-align: center; /* Teks rata tengah */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font utama */
+}
+header.hero p {
+    font-size: 1.3rem; /* Ukuran font */
+    max-width: 600px; /* Lebar maksimum */
+    margin: auto; /* Margin otomatis untuk center */
+    margin-bottom: 2rem; /* Margin bawah */
+}
+header.hero button {
+    background: white; /* Warna latar belakang */
+    border: none; /* Tanpa border */
+    padding: 0.75rem 2rem; /* Padding */
+    font-size: 1.1rem; /* Ukuran font */
+    font-weight: 700; /* Ketebalan font */
+    color: #2962ff; /* Warna teks */
+    border-radius: 50px; /* Radius border */
+    cursor: pointer; /* Pointer saat hover */
+    box-shadow: 0 4px 15px rgba(255,255,255,0.7); /* Bayangan tombol */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna */
+}
+header.hero button:hover {
+    background-color: #e0e0e0; /* Warna latar belakang saat hover */
+}
+header.hero .subtitle {
+    font-size: 2.5rem; /* Ukuran font */
+    font-weight: 600; /* Ketebalan font */
+    color: #ffffff; /* Warna teks */
+    margin-top: 0.5rem; /* Margin atas */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+    text-align: center; /* Teks rata tengah */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font utama */
+}
+header.hero .creator {
+    font-size: 1.2rem; /* Ukuran font */
+    font-weight: 500; /* Ketebalan font */
+    color: #e3e5e8; /* Warna teks */
+    margin-top: 1rem; /* Margin atas */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+    text-align: center; /* Teks rata tengah */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font utama */
+}
+
+/* Sections styling */
+section {
+    padding: 3rem 1rem; /* Padding section */
+    max-width: 1200px; /* Lebar maksimum section */
+    margin: auto; /* Margin otomatis untuk center */
+}
+section h2 {
+    color: #f5f5f5; /* Warna teks */
+    text-align: center; /* Teks rata tengah */
+    margin-bottom: 2rem; /* Margin bawah */
+    font-size: 2.8rem; /* Ukuran font */
+    text-transform: uppercase; /* Huruf besar */
+    letter-spacing: 4px; /* Jarak antar huruf */
+    background: linear-gradient(135deg, #3b5998, #4a69bd); /* Gradien latar belakang */
+    padding: 1rem; /* Padding untuk latar belakang */
+    border-radius: 15px; /* Radius border untuk latar belakang */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Bayangan untuk latar belakang */
+}
+
+/* About section */
+#about p {
+    font-size: 1.15rem; /* Ukuran font */
+    max-width: 750px; /* Lebar maksimum */
+    margin: auto; /* Margin otomatis untuk center */
+    color: #555; /* Warna teks */
+    line-height: 1.8; /* Tinggi baris */
+    text-align: center; /* Teks rata tengah */
+}
+
+/* Services Section */
+#services .cards {
+    display: grid; /* Grid layout */
+    gap: 2rem; /* Jarak antar item */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Kolom grid responsif */
+}
+#services .card {
+    background: white; /* Warna latar belakang */
+    padding: 2rem; /* Padding */
+    border-radius: 15px; /* Radius border */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Bayangan kartu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi transformasi */
+}
+#services .card:hover {
+    transform: translateY(-10px); /* Perubahan posisi saat hover */
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15); /* Bayangan saat hover */
+}
+#services .card h3 {
+    margin-bottom: 1rem; /* Margin bawah */
+    color: #2962ff; /* Warna teks */
+}
+#services .card p {
+    color: #666; /* Warna teks */
+    font-size: 1rem; /* Ukuran font */
+}
+
+/* Contact Section */
+#contact form {
+    max-width: 600px; /* Lebar maksimum */
+    margin: auto; /* Margin otomatis untuk center */
+    background: white; /* Warna latar belakang */
+    padding: 2rem; /* Padding */
+    border-radius: 15px; /* Radius border */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Bayangan form */
+}
+#contact form label {
+    display: block; /* Tampilkan sebagai blok */
+    font-weight: 600; /* Ketebalan font */
+    margin-bottom: 0.5rem; /* Margin bawah */
+}
+#contact form input,
+#contact form textarea {
+    width: 100%; /* Lebar penuh */
+    border: 1px solid #ccc; /* Border */
+    border-radius: 8px; /* Radius border */
+    padding: 0.75rem 1rem; /* Padding */
+    margin-bottom: 1.5rem; /* Margin bawah */
+    font-size: 1rem; /* Ukuran font */
+    resize: vertical; /* Resize vertikal */
+    transition: border-color 0.3s ease; /* Animasi perubahan warna border */
+}
+#contact form input:focus,
+#contact form textarea:focus {
+    outline: none; /* Tanpa outline */
+    border-color: #2962ff; /* Warna border saat fokus */
+    box-shadow: 0 0 5px #2962ff33; /* Bayangan saat fokus */
+}
+#contact form button {
+    background: #2962ff; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border: none; /* Tanpa border */
+    padding: 1rem 2rem; /* Padding */
+    font-weight: 700; /* Ketebalan font */
+    border-radius: 50px; /* Radius border */
+    cursor: pointer; /* Pointer saat hover */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna */
+}
+#contact form button:hover {
+    background: #0039cb; /* Warna latar belakang saat hover */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Teks rata tengah */
+    padding: 2rem 1.5rem; /* Padding */
+    background: linear-gradient(135deg, #4a90e2, #6a11cb); /* Gradien latar belakang */
+    color: #e3e5e8; /* Warna teks */
+    font-weight: 600; /* Ketebalan font */
+    font-size: 1rem; /* Ukuran font */
+    border-radius: 10px; /* Radius border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan footer */
+    margin: auto; /* Margin otomatis untuk center */
+    max-width: 1200px; /* Lebar maksimum */
+}
+
+/* Responsive Nav Toggle for mobile */
+@media (max-width: 768px) {
+    nav .container {
+        flex-wrap: wrap; /* Membungkus elemen */
+    }
+    nav ul {
+        width: 100%; /* Lebar penuh */
+        justify-content: center; /* Elemen rata tengah */
+        margin-top: 1rem; /* Margin atas */
+        gap: 0.5rem; /* Jarak antar item */
+    }
+    nav ul li {
+        font-size: 1.1rem; /* Ukuran font */
+    }
+    header.hero h1 {
+        font-size: 1.8rem; /* Ukuran font */
+    }
+    section h2 {
+        font-size: 2rem; /* Ukuran font */
+    }
+    .materials {
+        flex-direction: column; /* Tata letak kolom */
+        gap: 1rem; /* Jarak antar item */
+    }
+    .material {
+        width: 100%; /* Lebar penuh */
+    }
+}
+
+/* Materi Materi Section */
+.materials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items */
+    gap: 2rem; /* Gap between items */
+    margin-top: 2rem;
+}
+
+.material {
+    text-align: center;
+    background: linear-gradient(135deg, #3b5998, #4a69bd); /* Card gradient */
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease;
+    width: 30%;
+    opacity: 0.9;
+    display: block; /* Kembali ke block agar gambar di atas teks */
+}
+
+.material::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.material::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.material:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+}
+
+.material-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.material h3 {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.material p {
+    margin-bottom: 0.5rem;
+    color: #e0e0e0;
+    font-size: 1rem;
+    text-align: justify;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive: 3 atas, 2 bawah */
+@media (max-width: 1100px) {
+    .material {
+        width: 45%;
+    }
+}
+@media (max-width: 768px) {
+    .materials {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .material {
+        width: 100%;
+    }
+}
